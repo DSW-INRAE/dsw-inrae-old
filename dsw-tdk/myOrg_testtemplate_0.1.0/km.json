@@ -1,0 +1,519 @@
+{
+  "annotations": [],
+  "chapterUuids": [
+    "b6fbdcca-30f3-41c3-8f6c-abce869696cd",
+    "5f6956bc-fe7a-4352-851f-b0b19026dd7a",
+    "fa154854-a838-4141-83c8-b9d590b7a1c5"
+  ],
+  "entities": {
+    "answers": {
+      "22d3a2a7-d649-42bf-913e-e0c5f6d69670": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "no",
+        "metricMeasures": [],
+        "uuid": "22d3a2a7-d649-42bf-913e-e0c5f6d69670"
+      },
+      "40748837-ae0b-4f85-bf12-c84a859a1c1c": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Quantitative",
+        "metricMeasures": [],
+        "uuid": "40748837-ae0b-4f85-bf12-c84a859a1c1c"
+      },
+      "7e428e51-8974-4351-8c42-d70bd4fdd927": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Male",
+        "metricMeasures": [],
+        "uuid": "7e428e51-8974-4351-8c42-d70bd4fdd927"
+      },
+      "88564920-fda9-4544-b63e-ac5e56e3d64f": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "",
+        "metricMeasures": [],
+        "uuid": "88564920-fda9-4544-b63e-ac5e56e3d64f"
+      },
+      "a63989ce-9bf1-4762-9510-8dfab1ea5d5f": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "yes",
+        "metricMeasures": [],
+        "uuid": "a63989ce-9bf1-4762-9510-8dfab1ea5d5f"
+      },
+      "baeb199f-09f2-4b55-a35b-cbf5df9ad2e8": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Other",
+        "metricMeasures": [],
+        "uuid": "baeb199f-09f2-4b55-a35b-cbf5df9ad2e8"
+      },
+      "d0dd55ec-2f24-4f03-b4c1-9dc1c6ce2711": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Quantitative",
+        "metricMeasures": [],
+        "uuid": "d0dd55ec-2f24-4f03-b4c1-9dc1c6ce2711"
+      },
+      "eb3eec63-15bc-4446-979d-09220d177500": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Qualitative",
+        "metricMeasures": [],
+        "uuid": "eb3eec63-15bc-4446-979d-09220d177500"
+      },
+      "efce3800-36e0-4202-a217-dd7dab65ae52": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Male",
+        "metricMeasures": [],
+        "uuid": "efce3800-36e0-4202-a217-dd7dab65ae52"
+      },
+      "f3ffd196-897d-4565-983c-6e60e202d6fa": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Female",
+        "metricMeasures": [],
+        "uuid": "f3ffd196-897d-4565-983c-6e60e202d6fa"
+      },
+      "faf73886-dca3-4227-8844-e5a0db8eb64c": {
+        "advice": null,
+        "annotations": [],
+        "followUpUuids": [],
+        "label": "Qualitative",
+        "metricMeasures": [],
+        "uuid": "faf73886-dca3-4227-8844-e5a0db8eb64c"
+      }
+    },
+    "chapters": {
+      "5f6956bc-fe7a-4352-851f-b0b19026dd7a": {
+        "annotations": [],
+        "questionUuids": [
+          "743da09c-31ee-48e8-9ce1-efe05b15ce33",
+          "6cdf257a-8be5-4bb9-a920-ab8d767b7ca3",
+          "d31ad400-6893-426e-aeb1-574035a7bcc1"
+        ],
+        "text": null,
+        "title": "Project Info",
+        "uuid": "5f6956bc-fe7a-4352-851f-b0b19026dd7a"
+      },
+      "b6fbdcca-30f3-41c3-8f6c-abce869696cd": {
+        "annotations": [],
+        "questionUuids": [
+          "e825903f-0a18-461e-96f9-2ae836351a79",
+          "dcd2ef2c-ff2d-48c2-9435-d63143447d3d",
+          "fd3cf155-49cb-4298-a104-661f1f9995ac",
+          "a7ac0e74-eed1-4a3f-8302-46a35ab10e59",
+          "ed2b9b45-5d0d-46e1-8829-2a771ed52788"
+        ],
+        "text": null,
+        "title": "Personal Information",
+        "uuid": "b6fbdcca-30f3-41c3-8f6c-abce869696cd"
+      },
+      "fa154854-a838-4141-83c8-b9d590b7a1c5": {
+        "annotations": [],
+        "questionUuids": [
+          "6bec9561-51ea-4000-81f1-8cf3bc37def2"
+        ],
+        "text": null,
+        "title": "Data",
+        "uuid": "fa154854-a838-4141-83c8-b9d590b7a1c5"
+      }
+    },
+    "choices": {
+      "1d41f0c7-ffd8-43cb-89a2-be3eda97fac5": {
+        "annotations": [],
+        "label": "INRAE",
+        "uuid": "1d41f0c7-ffd8-43cb-89a2-be3eda97fac5"
+      },
+      "2d23b669-4a54-4084-a080-c667f76e4ba9": {
+        "annotations": [],
+        "label": "yes",
+        "uuid": "2d23b669-4a54-4084-a080-c667f76e4ba9"
+      },
+      "3152f17d-6301-46f3-a0a2-a12b05677db6": {
+        "annotations": [],
+        "label": "no",
+        "uuid": "3152f17d-6301-46f3-a0a2-a12b05677db6"
+      },
+      "3386e2a9-b7a9-4656-ac22-52aba908231d": {
+        "annotations": [],
+        "label": "Boy",
+        "uuid": "3386e2a9-b7a9-4656-ac22-52aba908231d"
+      },
+      "34013ab9-16ff-4673-af95-7b1536efda86": {
+        "annotations": [],
+        "label": "",
+        "uuid": "34013ab9-16ff-4673-af95-7b1536efda86"
+      },
+      "4ce529e9-6409-4763-a43d-d67d1e4d3064": {
+        "annotations": [],
+        "label": "Others",
+        "uuid": "4ce529e9-6409-4763-a43d-d67d1e4d3064"
+      },
+      "55ecc7ba-7af5-4863-9305-52c5cbe7f7d3": {
+        "annotations": [],
+        "label": "Other",
+        "uuid": "55ecc7ba-7af5-4863-9305-52c5cbe7f7d3"
+      },
+      "581ebfb4-a6d8-4551-956f-fcd2bfbd244d": {
+        "annotations": [],
+        "label": "CIRAD",
+        "uuid": "581ebfb4-a6d8-4551-956f-fcd2bfbd244d"
+      },
+      "6e680712-39dc-45cc-9640-edac9b0cfe17": {
+        "annotations": [],
+        "label": "Male",
+        "uuid": "6e680712-39dc-45cc-9640-edac9b0cfe17"
+      },
+      "806bb8c1-0426-44c8-b47f-e3e441751fbe": {
+        "annotations": [],
+        "label": "Female",
+        "uuid": "806bb8c1-0426-44c8-b47f-e3e441751fbe"
+      },
+      "825f7d7a-1de5-49b8-a44f-135a0fb04e97": {
+        "annotations": [],
+        "label": "no",
+        "uuid": "825f7d7a-1de5-49b8-a44f-135a0fb04e97"
+      },
+      "94c00b4a-f59d-4eb7-99bf-b0c9178dd992": {
+        "annotations": [],
+        "label": "Yes",
+        "uuid": "94c00b4a-f59d-4eb7-99bf-b0c9178dd992"
+      },
+      "9745d4c4-ecf9-45a0-879e-b1f5ec407331": {
+        "annotations": [],
+        "label": "CIRAD",
+        "uuid": "9745d4c4-ecf9-45a0-879e-b1f5ec407331"
+      },
+      "aa40ccd4-2cfa-4968-a73f-fececac4e2c3": {
+        "annotations": [],
+        "label": "Other",
+        "uuid": "aa40ccd4-2cfa-4968-a73f-fececac4e2c3"
+      },
+      "aa4c567a-ebcd-42d9-90dc-f5abaf3d9800": {
+        "annotations": [],
+        "label": "INRAE",
+        "uuid": "aa4c567a-ebcd-42d9-90dc-f5abaf3d9800"
+      },
+      "d5c53952-246a-4286-9b60-d108f1154601": {
+        "annotations": [],
+        "label": "No",
+        "uuid": "d5c53952-246a-4286-9b60-d108f1154601"
+      },
+      "d69556b6-c0d1-4dc2-bdf0-ca8ebbdff624": {
+        "annotations": [],
+        "label": "yes",
+        "uuid": "d69556b6-c0d1-4dc2-bdf0-ca8ebbdff624"
+      }
+    },
+    "experts": {},
+    "integrations": {},
+    "metrics": {},
+    "phases": {},
+    "questions": {
+      "4bdf7971-b7f6-4906-84fa-678bd8230735": {
+        "annotations": [],
+        "choiceUuids": [
+          "1d41f0c7-ffd8-43cb-89a2-be3eda97fac5",
+          "581ebfb4-a6d8-4551-956f-fcd2bfbd244d",
+          "4ce529e9-6409-4763-a43d-d67d1e4d3064",
+          "3386e2a9-b7a9-4656-ac22-52aba908231d"
+        ],
+        "expertUuids": [],
+        "questionType": "MultiChoiceQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [],
+        "text": null,
+        "title": "Sectors concerned",
+        "uuid": "4bdf7971-b7f6-4906-84fa-678bd8230735"
+      },
+      "6bec9561-51ea-4000-81f1-8cf3bc37def2": {
+        "annotations": [
+          {
+            "key": "myFirstAnnotation",
+            "value": "Yes"
+          }
+        ],
+        "expertUuids": [],
+        "itemTemplateQuestionUuids": [
+          "7f676075-e23c-4f61-9561-83820ea15e83",
+          "9c7df043-e184-4021-bc45-913dd1f64e02",
+          "eb6378c4-f696-43f7-8590-03e9c3f08b30"
+        ],
+        "questionType": "ListQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad"
+        ],
+        "text": null,
+        "title": "Data",
+        "uuid": "6bec9561-51ea-4000-81f1-8cf3bc37def2"
+      },
+      "6cdf257a-8be5-4bb9-a920-ab8d767b7ca3": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "de165cb1-db59-4521-b870-68b7befc04bf"
+        ],
+        "text": null,
+        "title": "Start Date",
+        "uuid": "6cdf257a-8be5-4bb9-a920-ab8d767b7ca3",
+        "valueType": "DateQuestionValueType"
+      },
+      "743da09c-31ee-48e8-9ce1-efe05b15ce33": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad",
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+          "de165cb1-db59-4521-b870-68b7befc04bf"
+        ],
+        "text": null,
+        "title": "Name",
+        "uuid": "743da09c-31ee-48e8-9ce1-efe05b15ce33",
+        "valueType": "StringQuestionValueType"
+      },
+      "7f676075-e23c-4f61-9561-83820ea15e83": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad"
+        ],
+        "text": null,
+        "title": "Name of data",
+        "uuid": "7f676075-e23c-4f61-9561-83820ea15e83",
+        "valueType": "StringQuestionValueType"
+      },
+      "98b59764-8b38-41f3-8992-768b9cb6a6d6": {
+        "annotations": [],
+        "answerUuids": [],
+        "expertUuids": [],
+        "questionType": "OptionsQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [],
+        "text": null,
+        "title": "",
+        "uuid": "98b59764-8b38-41f3-8992-768b9cb6a6d6"
+      },
+      "9c7df043-e184-4021-bc45-913dd1f64e02": {
+        "annotations": [],
+        "answerUuids": [
+          "d0dd55ec-2f24-4f03-b4c1-9dc1c6ce2711",
+          "faf73886-dca3-4227-8844-e5a0db8eb64c"
+        ],
+        "expertUuids": [],
+        "questionType": "OptionsQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad",
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3"
+        ],
+        "text": null,
+        "title": "Type of Data",
+        "uuid": "9c7df043-e184-4021-bc45-913dd1f64e02"
+      },
+      "a7ac0e74-eed1-4a3f-8302-46a35ab10e59": {
+        "annotations": [],
+        "answerUuids": [
+          "efce3800-36e0-4202-a217-dd7dab65ae52",
+          "f3ffd196-897d-4565-983c-6e60e202d6fa",
+          "baeb199f-09f2-4b55-a35b-cbf5df9ad2e8"
+        ],
+        "expertUuids": [],
+        "questionType": "OptionsQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3"
+        ],
+        "text": null,
+        "title": "Gender",
+        "uuid": "a7ac0e74-eed1-4a3f-8302-46a35ab10e59"
+      },
+      "bd5c9465-110f-4711-9e79-a1dd120c785e": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [],
+        "text": null,
+        "title": "Name of data ",
+        "uuid": "bd5c9465-110f-4711-9e79-a1dd120c785e",
+        "valueType": "StringQuestionValueType"
+      },
+      "bd756a0a-779b-4076-9552-87c463e9bf95": {
+        "annotations": [],
+        "answerUuids": [
+          "40748837-ae0b-4f85-bf12-c84a859a1c1c",
+          "eb3eec63-15bc-4446-979d-09220d177500"
+        ],
+        "expertUuids": [],
+        "questionType": "OptionsQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [],
+        "text": null,
+        "title": "Type of data",
+        "uuid": "bd756a0a-779b-4076-9552-87c463e9bf95"
+      },
+      "d31ad400-6893-426e-aeb1-574035a7bcc1": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "de165cb1-db59-4521-b870-68b7befc04bf"
+        ],
+        "text": null,
+        "title": "End Date",
+        "uuid": "d31ad400-6893-426e-aeb1-574035a7bcc1",
+        "valueType": "DateQuestionValueType"
+      },
+      "dcd2ef2c-ff2d-48c2-9435-d63143447d3d": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad",
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+          "de165cb1-db59-4521-b870-68b7befc04bf"
+        ],
+        "text": null,
+        "title": "Prenom",
+        "uuid": "dcd2ef2c-ff2d-48c2-9435-d63143447d3d",
+        "valueType": "StringQuestionValueType"
+      },
+      "e825903f-0a18-461e-96f9-2ae836351a79": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad",
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+          "de165cb1-db59-4521-b870-68b7befc04bf"
+        ],
+        "text": null,
+        "title": "Nom",
+        "uuid": "e825903f-0a18-461e-96f9-2ae836351a79",
+        "valueType": "StringQuestionValueType"
+      },
+      "eb6378c4-f696-43f7-8590-03e9c3f08b30": {
+        "annotations": [],
+        "choiceUuids": [
+          "aa4c567a-ebcd-42d9-90dc-f5abaf3d9800",
+          "9745d4c4-ecf9-45a0-879e-b1f5ec407331",
+          "aa40ccd4-2cfa-4968-a73f-fececac4e2c3"
+        ],
+        "expertUuids": [],
+        "questionType": "MultiChoiceQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "d8194f28-bfc0-41f0-ae84-ac95961b7dad",
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3"
+        ],
+        "text": null,
+        "title": "Departments concerned",
+        "uuid": "eb6378c4-f696-43f7-8590-03e9c3f08b30"
+      },
+      "ed2b9b45-5d0d-46e1-8829-2a771ed52788": {
+        "annotations": [],
+        "answerUuids": [
+          "a63989ce-9bf1-4762-9510-8dfab1ea5d5f",
+          "22d3a2a7-d649-42bf-913e-e0c5f6d69670"
+        ],
+        "expertUuids": [],
+        "questionType": "OptionsQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3"
+        ],
+        "text": null,
+        "title": "Married",
+        "uuid": "ed2b9b45-5d0d-46e1-8829-2a771ed52788"
+      },
+      "fd3cf155-49cb-4298-a104-661f1f9995ac": {
+        "annotations": [],
+        "expertUuids": [],
+        "questionType": "ValueQuestion",
+        "referenceUuids": [],
+        "requiredPhaseUuid": null,
+        "tagUuids": [
+          "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+          "de165cb1-db59-4521-b870-68b7befc04bf"
+        ],
+        "text": null,
+        "title": "Email",
+        "uuid": "fd3cf155-49cb-4298-a104-661f1f9995ac",
+        "valueType": "EmailQuestionValueType"
+      }
+    },
+    "references": {},
+    "tags": {
+      "ac557c9e-b4bd-49eb-930e-618e15720fa3": {
+        "annotations": [],
+        "color": "#3498DB",
+        "description": null,
+        "name": "DPO INRAE",
+        "uuid": "ac557c9e-b4bd-49eb-930e-618e15720fa3"
+      },
+      "d8194f28-bfc0-41f0-ae84-ac95961b7dad": {
+        "annotations": [],
+        "color": "#1ABC9C",
+        "description": null,
+        "name": "INRAE",
+        "uuid": "d8194f28-bfc0-41f0-ae84-ac95961b7dad"
+      },
+      "de165cb1-db59-4521-b870-68b7befc04bf": {
+        "annotations": [],
+        "color": "#2ECC71",
+        "description": null,
+        "name": "CIRAD",
+        "uuid": "de165cb1-db59-4521-b870-68b7befc04bf"
+      }
+    }
+  },
+  "integrationUuids": [],
+  "metricUuids": [],
+  "phaseUuids": [],
+  "tagUuids": [
+    "d8194f28-bfc0-41f0-ae84-ac95961b7dad",
+    "ac557c9e-b4bd-49eb-930e-618e15720fa3",
+    "de165cb1-db59-4521-b870-68b7befc04bf"
+  ],
+  "uuid": "415f0e3c-224f-45f9-b6d0-528308461ed0"
+}

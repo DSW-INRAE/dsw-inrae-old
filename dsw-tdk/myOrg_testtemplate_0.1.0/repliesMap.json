@@ -1,0 +1,221 @@
+{
+  "5f6956bc-fe7a-4352-851f-b0b19026dd7a.6cdf257a-8be5-4bb9-a920-ab8d767b7ca3": {
+    "createdAt": "2023-04-27T08:29:41.563941839Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "2023-04-27"
+    }
+  },
+  "5f6956bc-fe7a-4352-851f-b0b19026dd7a.743da09c-31ee-48e8-9ce1-efe05b15ce33": {
+    "createdAt": "2023-04-27T08:29:38.795749385Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "myProject"
+    }
+  },
+  "5f6956bc-fe7a-4352-851f-b0b19026dd7a.d31ad400-6893-426e-aeb1-574035a7bcc1": {
+    "createdAt": "2023-04-27T08:29:43.607893706Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "2023-04-29"
+    }
+  },
+  "b6fbdcca-30f3-41c3-8f6c-abce869696cd.a7ac0e74-eed1-4a3f-8302-46a35ab10e59": {
+    "createdAt": "2023-04-27T08:29:31.62494024Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "AnswerReply",
+      "value": "efce3800-36e0-4202-a217-dd7dab65ae52"
+    }
+  },
+  "b6fbdcca-30f3-41c3-8f6c-abce869696cd.dcd2ef2c-ff2d-48c2-9435-d63143447d3d": {
+    "createdAt": "2023-04-27T08:29:20.610848477Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "Picot"
+    }
+  },
+  "b6fbdcca-30f3-41c3-8f6c-abce869696cd.e825903f-0a18-461e-96f9-2ae836351a79": {
+    "createdAt": "2023-04-27T08:29:19.322027134Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "Theodore"
+    }
+  },
+  "b6fbdcca-30f3-41c3-8f6c-abce869696cd.ed2b9b45-5d0d-46e1-8829-2a771ed52788": {
+    "createdAt": "2023-04-27T08:29:32.40715085Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "AnswerReply",
+      "value": "22d3a2a7-d649-42bf-913e-e0c5f6d69670"
+    }
+  },
+  "b6fbdcca-30f3-41c3-8f6c-abce869696cd.fd3cf155-49cb-4298-a104-661f1f9995ac": {
+    "createdAt": "2023-04-27T08:29:29.401003839Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "theodorepicot@example.com"
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2": {
+    "createdAt": "2023-04-28T11:39:36.258722342Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "ItemListReply",
+      "value": [
+        "eecbb50b-e757-4441-a061-8c98cfe034a4",
+        "7caf94b0-f504-46fc-88ed-400a87397882"
+      ]
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2.7caf94b0-f504-46fc-88ed-400a87397882.7f676075-e23c-4f61-9561-83820ea15e83": {
+    "createdAt": "2023-04-28T11:43:22.381833114Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "Less important data"
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2.7caf94b0-f504-46fc-88ed-400a87397882.9c7df043-e184-4021-bc45-913dd1f64e02": {
+    "createdAt": "2023-04-28T11:43:23.777821915Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "AnswerReply",
+      "value": "faf73886-dca3-4227-8844-e5a0db8eb64c"
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2.7caf94b0-f504-46fc-88ed-400a87397882.eb6378c4-f696-43f7-8590-03e9c3f08b30": {
+    "createdAt": "2023-04-28T11:43:24.769001144Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "MultiChoiceReply",
+      "value": [
+        "aa40ccd4-2cfa-4968-a73f-fececac4e2c3"
+      ]
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2.eecbb50b-e757-4441-a061-8c98cfe034a4.7f676075-e23c-4f61-9561-83820ea15e83": {
+    "createdAt": "2023-04-28T11:43:11.293367581Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "StringReply",
+      "value": "Very Extremely Important data"
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2.eecbb50b-e757-4441-a061-8c98cfe034a4.9c7df043-e184-4021-bc45-913dd1f64e02": {
+    "createdAt": "2023-04-28T11:43:12.425806897Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "AnswerReply",
+      "value": "d0dd55ec-2f24-4f03-b4c1-9dc1c6ce2711"
+    }
+  },
+  "fa154854-a838-4141-83c8-b9d590b7a1c5.6bec9561-51ea-4000-81f1-8cf3bc37def2.eecbb50b-e757-4441-a061-8c98cfe034a4.eb6378c4-f696-43f7-8590-03e9c3f08b30": {
+    "createdAt": "2023-04-28T11:43:15.552457426Z",
+    "createdBy": {
+      "firstName": "Albert",
+      "gravatarHash": "a8ef6e3f64f212bdb6decadd7dd60731",
+      "imageUrl": null,
+      "lastName": "Einstein",
+      "uuid": "ec6f8e90-2a91-49ec-aa3f-9eab2267fc66"
+    },
+    "value": {
+      "type": "MultiChoiceReply",
+      "value": [
+        "aa40ccd4-2cfa-4968-a73f-fececac4e2c3",
+        "9745d4c4-ecf9-45a0-879e-b1f5ec407331",
+        "aa4c567a-ebcd-42d9-90dc-f5abaf3d9800"
+      ]
+    }
+  }
+}

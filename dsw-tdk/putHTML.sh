@@ -4,7 +4,7 @@ DSW_USERNAME=albert.einstein@example.com
 DSW_PASSWORD=password
 TEMPLATE_PATH=myOrg_testtemplate_0.1.0
 PROJECT_UUUID=6f267cf8-f075-4058-9b95-99646f6ba987
-FORMAT_UUUID=2f471cae-566f-4309-b255-5cac7ffc4046 # l'id du format à tester (HTML, CSV, DOCX...), il se trouve dans template.json
+FORMAT_UUUID=fc6bdb51-14f7-451a-b8dd-584141b5bdaf # l'id du format à tester (HTML, CSV, DOCX...), il se trouve dans template.json
 
 
 #récupération du token d'identification

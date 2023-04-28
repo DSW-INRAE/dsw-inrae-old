@@ -32,13 +32,32 @@
           }
         }
       ]
+    },
+    {
+      "uuid": "2f471cae-566f-4309-b255-5cac7ffc4046",
+      "name": "CSV",
+      "shortName": "csv",
+      "icon": "fas fa-file",
+      "color": "#f15722",
+      "steps": [
+        {
+          "name": "jinja",
+          "options": {
+            "template": "testKMJinjav2.csv.jinja2",
+            "content-type": "text/csv",
+            "extension": "csv"
+          }
+        }
+      ]
     }
   ],
   "_tdk": {
     "version": "3.13.0",
     "readmeFile": "README.md",
     "files": [
-      "testKMJinja.html.jinja2"
+      "testKMJinja.html.jinja2",
+      "testKMJinja.csv.jinja2",
+      "testKMJinjav2.csv.jinja2"
     ]
   }
 }
