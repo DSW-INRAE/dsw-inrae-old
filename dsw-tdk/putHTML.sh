@@ -3,7 +3,7 @@ DSW_API=http://localhost:3000
 DSW_USERNAME=albert.einstein@example.com
 DSW_PASSWORD=password
 TEMPLATE_PATH=myOrg_testtemplate_0.1.0
-PROJECT_UUUID=6f267cf8-f075-4058-9b95-99646f6ba987
+PROJECT_UUUID=9427eec4-821a-4fbc-8ef5-f0248d9010b1
 FORMAT_UUUID=fc6bdb51-14f7-451a-b8dd-584141b5bdaf # l'id du format à tester (HTML, CSV, DOCX...), il se trouve dans template.json
 
 
