@@ -1,0 +1,24 @@
+{
+  "name": "enrich-docx",
+  "options": {
+    "rewrite:_rels/.rels": "static:src/docx/_rels/.rels",
+    "rewrite:docProps/app.xml": "static:src/docx/docProps/app.xml",
+    "rewrite:docProps/core.xml": "static:src/docx/docProps/core.xml",
+    "rewrite:docProps/custom.xml": "static:src/docx/docProps/custom.xml",
+    "rewrite:word/_rels/document.xml.rels": "static:src/docx/word/_rels/document.xml.rels",
+    "rewrite:word/_rels/footer1.xml.rels": "static:src/docx/word/_rels/footer1.xml.rels",
+    "rewrite:word/_rels/header1.xml.rels": "static:src/docx/word/_rels/header1.xml.rels",
+    "rewrite:word/_rels/header2.xml.rels": "static:src/docx/word/_rels/header2.xml.rels",
+    "rewrite:word/theme/theme1.xml": "static:src/docx/word/theme/theme1.xml",
+    "rewrite:word/document.xml": "static:src/docx/word/document.xml",
+    "rewrite:word/fontTable.xml": "static:src/docx/word/fontTable.xml",
+    "rewrite:word/footer1.xml": "static:src/docx/word/footer1.xml",
+    "rewrite:word/footer2.xml": "static:src/docx/word/footer2.xml",
+    "rewrite:word/header1.xml": "static:src/docx/word/header1.xml",
+    "rewrite:word/header2.xml": "static:src/docx/word/header2.xml",
+    "rewrite:word/numbering.xml": "static:src/docx/word/numbering.xml",
+    "rewrite:word/settings.xml": "static:src/docx/word/settings.xml",
+    "rewrite:word/styles.xml": "static:src/docx/word/styles.xml",
+    "rewrite:[Content_Types].xml": "static:src/docx/[Content_Types].xml"
+  }
+}

@@ -1,0 +1,21 @@
+{%- set km = ctx.knowledgeModel -%}
+{%- set repliesMap = ctx.questionnaireReplies -%}
+
+<div>
+
+    {% set projet = namespace() %}
+    {% set projet.cibleAUTR = repliesMap["7f3eb486-702d-4c92-8dc5-7014174a3fe0.f77ac722-46d8-4bdf-a499-31a7b1dc6e20"] | reply_str_value == "e2d66dba-b62f-4b82-9f7f-1a6cdad47f95" %}
+    {% set projet.cibleAUTR = repliesMap["7f3eb486-702d-4c92-8dc5-7014174a3fe0.f77ac722-46d8-4bdf-a499-31a7b1dc6e20"] | reply_str_value == "e2d66dba-b62f-4b82-9f7f-1a6cdad47f95" %}
+    {% if projet.cibleAUTR %}
+        {% set projet.precisionsCibleAUTR = repliesMap["7f3eb486-702d-4c92-8dc5-7014174a3fe0.f77ac722-46d8-4bdf-a499-31a7b1dc6e20.e2d66dba-b62f-4b82-9f7f-1a6cdad47f95.31d8ee4b-a746-4b7c-9a4e-8c91aa065dcf"] | reply_str_value %}
+    {% endif %}
+    {{ projet.cibleAUTR }}
+    {{ projet.precisionsCibleAUTR }}
+
+
+</div>
+<p>
+    ___________________________________________________________________________
+</p>
+<div>
+</div>
