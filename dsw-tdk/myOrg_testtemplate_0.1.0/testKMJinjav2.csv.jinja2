@@ -1,10 +1,12 @@
-{#- Recursive marco  -#}
+{#- Macros -#}
 
-{%- macro markQuestions(replyPath , question, questionString) -%}
+{#- Cette fonction permet de traverser récursivement les question -#}
+
+{%- macro markQuestions(replyPathUuids, question, questionString) -%}
 
     {%- if question["questionType"] == "ListQuestion" -%}
 
-        {%- set reply = repliesMap[replyPath | reply_path]["value"] -%}
+        {%- set reply = repliesMap[replyPathUuids | reply_path]["value"] -%}
         {%- set k = namespace(value=0) -%}
 
         {%- for questionUuid in reply["value"] -%}
@@ -12,13 +14,15 @@
             {%- set l = namespace(value=1) -%}
 
             {%- for subQuestionUuid in question["itemTemplateQuestionUuids"] -%}
-                {%- set question = km.entities.questions[subQuestionUuid] -%}
-                {%- set newPath = replyPath.copy() -%}
-                {{- newPath.append(questionUuid) or ""-}}
-                {{- newPath.append(subQuestionUuid) or ""-}}
+                {%- set subQuestion = km.entities.questions[subQuestionUuid] -%}
+                {{- replyPathUuids.append(questionUuid) or ""-}}
+                {{- replyPathUuids.append(subQuestionUuid) or ""-}}
 
 
-                {{- markQuestions(replyPath, question, questionString + "." + k.value|of_alphabet + "." + l.value|string) -}}
+                {{- markQuestions(replyPathUuids, subQuestion, questionString + "." + k.value|of_alphabet + "." + l.value|string) -}}
+
+                {{- replyPathUuids.remove(questionUuid) or ""-}}
+                {{- replyPathUuids.remove(subQuestionUuid) or ""-}}
 
                 {%- set l.value = l.value + 1 -%}
             {%- endfor -%}
@@ -31,22 +35,7 @@
     {%- endif -%}
 {%- endmacro %}
 
-{%- macro questionValues(replyPath) -%}
-
-    {%- set reply = repliesMap[[replyPath] | reply_path]["value"] -%}
-
-    {%- if reply["type"] == "StringReply" -%}
-        {{- reply["value"] -}};
-    {%- elif reply["type"] == "AnswerReply" -%}
-        {#            {{- reply["value"] | reply_str_value -}}#}
-        {{- km["entities"]["answers"][reply["value"]]["label"] -}};
-    {%- elif reply["type"] == "MultiChoiceReply" -%}
-    {%- elif reply["type"] == "ItemListReply" -%}
-
-    {%- endif -%}
-
-{%- endmacro %}
-
+{#- Body of the script -#}
 
 {%- set km = ctx.knowledgeModel -%}
 {%- set repliesMap = ctx.questionnaireReplies -%}
@@ -73,6 +62,18 @@
 
 {%- for chapterUuid in km.entities.chapters -%}
     {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
+
+        {%- set reply = repliesMap[[chapterUuid, questionUuid] | reply_path]["value"] -%}
+
+        {%- if reply["type"] == "StringReply" -%}
+            {{- reply["value"] -}};
+        {%- elif reply["type"] == "AnswerReply" -%}
+                        {{- reply["value"] | reply_str_value -}}
+            {{- km["entities"]["answers"][reply["value"]]["label"] -}};
+        {%- elif reply["type"] == "MultiChoiceReply" -%}
+        {%- elif reply["type"] == "ItemListReply" -%}
+
+        {%- endif -%}
 
     {%- endfor -%}
 {%- endfor -%}
