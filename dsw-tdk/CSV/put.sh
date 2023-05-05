@@ -2,10 +2,9 @@
 DSW_API=http://localhost:3000
 DSW_USERNAME=albert.einstein@example.com
 DSW_PASSWORD=password
-TEMPLATE_PATH=myOrg_testtemplate_0.1.0
+TEMPLATE_PATH=moisa_template-moisa-csv_0.1.0
 PROJECT_UUUID=9427eec4-821a-4fbc-8ef5-f0248d9010b1
 FORMAT_UUUID=2f471cae-566f-4309-b255-5cac7ffc4046 # l'id du format à tester (HTML, CSV, DOCX...), il se trouve dans template.json
-
 
 #récupération du token d'identification
 URL_TOKEN=$DSW_API/tokens
@@ -54,7 +53,7 @@ curl --request PUT -sL \
 
 # j'exporte le projet
 URL_EXPORT=$DSW_API/documents
-BODY_EXPORT=\{\"name\":\"testPGD\",\"questionnaireUuid\":\"$PROJECT_UUUID\",\"documentTemplateId\":\"$templateID\",\"formatUuid\":\"$FORMAT_UUUID\",\"questionnaireEventUuid\":null\}
+BODY_EXPORT=\{\"name\":\"templateMoisaCSV\",\"questionnaireUuid\":\"$PROJECT_UUUID\",\"documentTemplateId\":\"$templateID\",\"formatUuid\":\"$FORMAT_UUUID\",\"questionnaireEventUuid\":null\}
 curl --request POST -sL \
      --url $URL_EXPORT\
      -H "Content-Type: application/json"\

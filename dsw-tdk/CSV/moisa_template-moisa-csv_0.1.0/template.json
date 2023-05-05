@@ -1,9 +1,9 @@
 {
-  "templateId": "testtemplate",
+  "templateId": "templatemoisacsv",
   "organizationId": "myorg",
   "version": "0.1.0",
-  "name": "testTemplate",
-  "description": "My custom template",
+  "name": "templateMoisaCSV",
+  "description": "CSV template pour le km moisa",
   "license": "CC0",
   "metamodelVersion": 11,
   "recommendedPackageId": null,
@@ -17,23 +17,6 @@
   ],
   "formats": [
     {
-      "uuid": "fc6bdb51-14f7-451a-b8dd-584141b5bdaf",
-      "name": "HTML",
-      "shortName": "html",
-      "icon": "fas fa-file",
-      "color": "#f15722",
-      "steps": [
-        {
-          "name": "jinja",
-          "options": {
-            "template": "testKMJinja.html.jinja2",
-            "content-type": "text/html",
-            "extension": "html"
-          }
-        }
-      ]
-    },
-    {
       "uuid": "2f471cae-566f-4309-b255-5cac7ffc4046",
       "name": "CSV",
       "shortName": "csv",
@@ -43,7 +26,7 @@
         {
           "name": "jinja",
           "options": {
-            "template": "testKMJinjav2.csv.jinja2",
+            "template": "template.csv.jinja2",
             "content-type": "text/csv",
             "extension": "csv"
           }
@@ -55,9 +38,7 @@
     "version": "3.13.0",
     "readmeFile": "README.md",
     "files": [
-      "testKMJinja.html.jinja2",
-      "testKMJinja.csv.jinja2",
-      "testKMJinjav2.csv.jinja2"
+      "template.csv.jinja2"
     ]
   }
 }

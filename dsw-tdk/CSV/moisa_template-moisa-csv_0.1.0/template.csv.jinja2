@@ -29,7 +29,7 @@
             {%- set k.value = k.value + 1 -%}
         {%- endfor -%}
     {%- elif question["questionType"] == "OptionsQuestion" -%}
-        {{- "\"" + questionString + "\"" + "," -}}
+        {{- "\"" + questionString + "\"," -}}
         {%- set reply = repliesMap[replyPathUuids | reply_path]["value"] -%}
 
         {%- set answerUuid = reply["value"] -%}
@@ -52,7 +52,7 @@
             {%- set k.value = k.value + 1 -%}
         {%- endfor -%}
     {%- else -%}
-        {{- "\"" + questionString + "\"" + ","-}}
+        {{- "\"" + questionString + "\"," -}}
     {%- endif -%}
 {%- endmacro %}
 
@@ -75,7 +75,7 @@
             {%- endfor -%}
         {%- endfor -%}
     {%- elif question["questionType"] == "OptionsQuestion" -%}
-        {{- "\"" + km.entities.answers[reply["value"]].label + "\"" + "," -}}
+        {{- "\"" + km.entities.answers[reply["value"]].label + "\"," -}}
         {%- set answerUuid = reply["value"] -%}
 
         {%- set followUpUuids = km.entities.answers[answerUuid].followUpUuids -%}
@@ -94,7 +94,7 @@
 
         {%- endfor -%}
     {%- else -%}
-        {{- "\"" + reply["value"] + "\"" + "," -}}
+        {{- "\"" + reply["value"] + "\"," -}}
     {%- endif -%}
 
 {%- endmacro -%}
@@ -105,46 +105,23 @@
 {%- set repliesMap = ctx.questionnaireReplies -%}
 
 {%- set i = namespace(value = 1) -%}
-{%- set lastChapterUuid = "7dd0abe3-0cb1-4bd8-9ece-35726e127963" -%}
+{%- for chapterUuid in km.chapterUuids -%}
+    {% set j = namespace(value = 1) %}
+    {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
 
-{%- for chapterUuid in km.entities.chapters -%}
+        {%- set question = km.entities.questions[questionUuid] -%}
+        {{- markQuestions([chapterUuid, questionUuid], question, "q" + i.value | string + "." + j.value | string) -}}
 
-    {%- if chapterUuid != lastChapterUuid -%}
-        {% set j = namespace(value = 1) %}
-        {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
-
-            {%- set question = km.entities.questions[questionUuid] -%}
-            {{- markQuestions([chapterUuid, questionUuid], question, "q" + i.value | string + "." + j.value | string) -}}
-
-            {%- set j.value = j.value + 1 -%}
-        {%- endfor -%}
-        {%- set i.value = i.value + 1 -%}
-    {%- endif -%}
-{%- endfor -%}
-
-{%- set i.value = i.value + 1 -%}
-
-{% set j = namespace(value = 1) %}
-{%- for questionUuid in km.entities.chapters[lastChapterUuid].questionUuids -%}
-
-    {%- set question = km.entities.questions[questionUuid] -%}
-    {{- markQuestions([lastChapterUuid, questionUuid], question, "q" + i.value | string + "." + j.value | string) -}}
-
-    {%- set j.value = j.value + 1 -%}
+        {%- set j.value = j.value + 1 -%}
+    {%- endfor -%}
+    {%- set i.value = i.value + 1 -%}
 {%- endfor -%}
 
 {{- "\n" -}}
 
-{%- for chapterUuid in km.entities.chapters -%}
-    {%- if chapterUuid != lastChapterUuid -%}
-        {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
-            {%- set question = km.entities.questions[questionUuid] -%}
-            {{- valuesOfQuestions([chapterUuid, questionUuid], question) -}}
-        {%- endfor -%}
-    {%- endif -%}
-{%- endfor -%}
-
-{%- for questionUuid in km.entities.chapters[lastChapterUuid].questionUuids -%}
-    {%- set question = km.entities.questions[questionUuid] -%}
-    {{- valuesOfQuestions([lastChapterUuid, questionUuid], question) -}}
+{%- for chapterUuid in km.chapterUuids -%}
+    {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
+        {%- set question = km.entities.questions[questionUuid] -%}
+        {{- valuesOfQuestions([chapterUuid, questionUuid], question) -}}
+    {%- endfor -%}
 {%- endfor -%}
