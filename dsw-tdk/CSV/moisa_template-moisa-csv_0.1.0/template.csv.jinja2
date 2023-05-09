@@ -7,26 +7,21 @@
     {%- if question["questionType"] == "ListQuestion" -%}
 
         {%- set reply = repliesMap[replyPathUuids | reply_path]["value"] -%}
-        {%- set k = namespace(value = 0) -%}
 
         {%- for questionUuid in reply["value"] -%}
-
-            {%- set l = namespace(value = 1) -%}
-
+            {%- set i = namespace(value = 1) -%}
             {%- for subQuestionUuid in question["itemTemplateQuestionUuids"] -%}
                 {%- set subQuestion = km.entities.questions[subQuestionUuid] -%}
                 {{- replyPathUuids.append(questionUuid) or "" -}}
                 {{- replyPathUuids.append(subQuestionUuid) or "" -}}
 
-                {{- markQuestions(replyPathUuids, subQuestion, questionString + "." + k.value | of_alphabet + "." + l.value | string) -}}
+                {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + i.value | string) -}}
 
                 {{- replyPathUuids.remove(questionUuid) or "" -}}
                 {{- replyPathUuids.remove(subQuestionUuid) or "" -}}
 
-                {%- set l.value = l.value + 1 -%}
+                {%- set i.value = i.value + 1 -%}
             {%- endfor -%}
-
-            {%- set k.value = k.value + 1 -%}
         {%- endfor -%}
     {%- elif question["questionType"] == "OptionsQuestion" -%}
         {{- "\"" + questionString + "\"," -}}
@@ -36,21 +31,22 @@
 
         {%- set followUpUuids = km.entities.answers[answerUuid].followUpUuids -%}
 
-        {%- set k = namespace(value = 1) -%}
+        {%- if followUpUuids|length > 1 -%}
+            {%- set i = namespace(value = 1) -%}
+            {%- for followUpUuid in followUpUuids -%}
+                {%- set subQuestion = km.entities.questions[followUpUuid] -%}
 
-        {%- for followUpUuid in followUpUuids -%}
-            {%- set subQuestion = km.entities.questions[followUpUuid] -%}
+                {{- replyPathUuids.append(answerUuid) or "" -}}
+                {{- replyPathUuids.append(followUpUuid) or "" -}}
 
-            {{- replyPathUuids.append(answerUuid) or "" -}}
-            {{- replyPathUuids.append(followUpUuid) or "" -}}
+                {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + i.value | string) -}}
 
-            {{- markQuestions(replyPathUuids, subQuestion, questionString + "." + 0 | of_alphabet + "." + k.value | string) -}}
+                {{- replyPathUuids.remove(answerUuid) or "" -}}
+                {{- replyPathUuids.remove(followUpUuid) or "" -}}
 
-            {{- replyPathUuids.remove(answerUuid) or "" -}}
-            {{- replyPathUuids.remove(followUpUuid) or "" -}}
-
-            {%- set k.value = k.value + 1 -%}
-        {%- endfor -%}
+                {%- set i.value = i.value + 1 -%}
+            {%- endfor -%}
+        {%- endif -%}
     {%- else -%}
         {{- "\"" + questionString + "\"," -}}
     {%- endif -%}
@@ -62,7 +58,6 @@
     {%- if question["questionType"] == "ListQuestion" -%}
         {%- for questionUuid in reply["value"] -%}
             {%- for subQuestionUuid in question["itemTemplateQuestionUuids"] -%}
-
                 {%- set subQuestion = km.entities.questions[subQuestionUuid] -%}
                 {{- replyPathUuids.append(questionUuid) or "" -}}
                 {{- replyPathUuids.append(subQuestionUuid) or "" -}}
@@ -71,7 +66,6 @@
 
                 {{- replyPathUuids.remove(questionUuid) or "" -}}
                 {{- replyPathUuids.remove(subQuestionUuid) or "" -}}
-
             {%- endfor -%}
         {%- endfor -%}
     {%- elif question["questionType"] == "OptionsQuestion" -%}
@@ -80,10 +74,8 @@
 
         {%- set followUpUuids = km.entities.answers[answerUuid].followUpUuids -%}
 
-
         {%- for followUpUuid in followUpUuids -%}
             {%- set subQuestion = km.entities.questions[followUpUuid] -%}
-
             {{- replyPathUuids.append(answerUuid) or "" -}}
             {{- replyPathUuids.append(followUpUuid) or "" -}}
 
@@ -91,12 +83,10 @@
 
             {{- replyPathUuids.remove(answerUuid) or "" -}}
             {{- replyPathUuids.remove(followUpUuid) or "" -}}
-
         {%- endfor -%}
     {%- else -%}
         {{- "\"" + reply["value"] + "\"," -}}
     {%- endif -%}
-
 {%- endmacro -%}
 
 {#- Body of the script -#}
@@ -108,10 +98,8 @@
 {%- for chapterUuid in km.chapterUuids -%}
     {% set j = namespace(value = 1) %}
     {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
-
         {%- set question = km.entities.questions[questionUuid] -%}
-        {{- markQuestions([chapterUuid, questionUuid], question, "q" + i.value | string + "." + j.value | string) -}}
-
+        {{- markQuestions([chapterUuid, questionUuid], question, "q" + i.value | string + "_" + j.value | string) -}}
         {%- set j.value = j.value + 1 -%}
     {%- endfor -%}
     {%- set i.value = i.value + 1 -%}
