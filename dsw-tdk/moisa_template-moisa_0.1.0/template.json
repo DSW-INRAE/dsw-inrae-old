@@ -69,6 +69,7 @@
                         "rewrite:word/footer2.xml": "static:src/docx/word/footer2.xml",
                         "rewrite:word/header1.xml": "static:src/docx/word/header1.xml",
                         "rewrite:word/header2.xml": "render:src/docx/word/header2.xml.j2"
+
                     }
                 }
             ]
