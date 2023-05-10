@@ -4,19 +4,19 @@
 
 {%- macro markQuestions(replyPathUuids, question, questionString) -%}
 
-    {%- if question["questionType"] == "ListQuestion" -%}
-        {{- "\"" + questionString + "\"," + "\"" + question["title"] + "\"" + "\n" -}}
-        {%- set reply = repliesMap[replyPathUuids | reply_path]["value"] -%}
+    {%- if question.questionType == "ListQuestion" -%}
+        {{- "\"" + questionString + "\"," + "\"" + question.title + "\"" + "\n" -}}
+        {%- set reply = repliesMap[replyPathUuids | reply_path].value -%}
         {%- set k = namespace(value = 0) -%}
 
-        {%- for questionUuid in reply["value"] -%}
+        {%- for questionUuid in reply.value -%}
             {%- set l = namespace(value = 1) -%}
-            {%- for subQuestionUuid in question["itemTemplateQuestionUuids"] -%}
+            {%- for subQuestionUuid in question.itemTemplateQuestionUuids -%}
                 {%- set subQuestion = km.entities.questions[subQuestionUuid] -%}
                 {{- replyPathUuids.append(questionUuid) or "" -}}
                 {{- replyPathUuids.append(subQuestionUuid) or "" -}}
 
-                {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + l.value | string) -}}
+                {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + k.value | of_alphabet + "_" + l.value | string) -}}
 
                 {{- replyPathUuids.remove(questionUuid) or "" -}}
                 {{- replyPathUuids.remove(subQuestionUuid) or "" -}}
@@ -25,13 +25,21 @@
             {%- endfor -%}
             {%- set k.value = k.value + 1 -%}
         {%- endfor -%}
-    {%- elif question["questionType"] == "OptionsQuestion" -%}
-        {{- "\"" + questionString + "\"," + "\"" + question["title"] + "\"" + "\n" -}}
-        {%- set reply = repliesMap[replyPathUuids | reply_path]["value"] -%}
+    {%- elif question.questionType == "OptionsQuestion" -%}
+        {{- "\"" + questionString + "\"," + "\"" + question.title + "\"" + "\n" -}}
+        {%- set reply = repliesMap[replyPathUuids | reply_path].value -%}
 
-        {%- set answerUuid = reply["value"] -%}
+        {%- set answerUuid = reply.value -%}
 
         {%- set followUpUuids = km.entities.answers[answerUuid].followUpUuids -%}
+
+        {%- set questionIndex = namespace(value = 0) -%}
+
+        {%- for anserUuidLoop in question.answerUuids -%}
+            {%- if anserUuidLoop == answerUuid -%}
+                {%- set questionIndex.value = loop.index - 1 -%}
+            {%- endif -%}
+        {%- endfor -%}
 
         {%- set k = namespace(value = 1) -%}
 
@@ -41,7 +49,7 @@
             {{- replyPathUuids.append(answerUuid) or "" -}}
             {{- replyPathUuids.append(followUpUuid) or "" -}}
 
-            {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + k.value | string) -}}
+            {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + questionIndex.value | of_alphabet + "_" + k.value | string) -}}
 
             {{- replyPathUuids.remove(answerUuid) or "" -}}
             {{- replyPathUuids.remove(followUpUuid) or "" -}}
@@ -49,7 +57,7 @@
             {%- set k.value = k.value + 1 -%}
         {%- endfor -%}
     {%- else -%}
-        {{- "\"" + questionString + "\"," + "\"" + question["title"] + "\"" + "\n" -}}
+        {{- "\"" + questionString + "\"," + "\"" + question.title + "\"" + "\n" -}}
     {%- endif -%}
 {%- endmacro %}
 
