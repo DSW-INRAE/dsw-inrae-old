@@ -3773,7 +3773,7 @@
         "referenceUuids": [],
         "requiredPhaseUuid": "b101f2d0-2476-452d-aa8d-95a41a02b52c",
         "tagUuids": [],
-        "text": None,
+        "text": "None",
         "title": "Préciser",
         "uuid": "221eb614-bb41-482c-beb5-da5b7528b56c",
         "valueType": "TextQuestionValueType"

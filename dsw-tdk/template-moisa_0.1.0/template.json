@@ -26,7 +26,7 @@
         {
           "name": "jinja",
           "options": {
-            "template": "template.csv.jinja2",
+            "template": "src/csv/template.csv.jinja2",
             "content-type": "text/csv",
             "extension": "csv"
           }
@@ -43,9 +43,26 @@
         {
           "name": "jinja",
           "options": {
-            "template": "glossary.csv.jinja2",
+            "template": "src/csv/glossary.csv.jinja2",
             "content-type": "text/csv",
             "extension": "csv"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "be1d4626-87d1-470c-8702-31d259bd47eb",
+      "name": "Submit",
+      "shortName": "sbmt",
+      "icon": "fas fa-file",
+      "color": "#f15722",
+      "steps": [
+        {
+          "name": "jinja",
+          "options": {
+            "template": "src/submit.json.jinja2",
+            "content-type": "text/json",
+            "extension": "json"
           }
         }
       ]
@@ -55,8 +72,7 @@
     "version": "3.13.0",
     "readmeFile": "README.md",
     "files": [
-      "template.csv.jinja2",
-      "glossary.csv.jinja2"
+      "src/*"
     ]
   }
 }

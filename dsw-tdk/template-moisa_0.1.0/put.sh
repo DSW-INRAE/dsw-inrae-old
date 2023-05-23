@@ -2,9 +2,9 @@
 DSW_API=http://localhost:3000
 DSW_USERNAME=albert.einstein@example.com
 DSW_PASSWORD=password
-TEMPLATE_PATH=moisa_template-moisa-csv_0.1.0
+TEMPLATE_PATH=./
 PROJECT_UUUID=9427eec4-821a-4fbc-8ef5-f0248d9010b1
-FORMAT_UUUID=2f471cae-566f-4309-b255-5cac7ffc4046 # l'id du format à tester (HTML, CSV, DOCX...), il se trouve dans template.json
+FORMAT_UUUID=be1d4626-87d1-470c-8702-31d259bd47eb # l'id du format à tester (HTML, CSV, DOCX...), il se trouve dans template.json
 
 #récupération du token d'identification
 URL_TOKEN=$DSW_API/tokens

@@ -1,0 +1,17 @@
+service:
+  code: ok
+
+security:
+  enabled: true
+  tokens:
+    - 'c3FtcU1Iemo4M3pQUDZUOnFDeERaTk02'
+
+other:
+  urlDSW:
+  urlCloud:
+  typeOfCloud
+
+
+#logging:
+#  level: WARNING
+#  format: ...

@@ -1,0 +1,7 @@
+#version: '3'
+
+services:
+  nextcloud-submitter:
+#    image:
+    ports:
+      - 8888:80
