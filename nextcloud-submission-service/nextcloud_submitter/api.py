@@ -2,12 +2,10 @@ import fastapi
 import fastapi.responses
 import os
 import pathlib
-import nextcloud_submitter.nextcloud as nextcloud
 
-
-
+from nextcloud_submitter import nextcloud
 from nextcloud_submitter.config import cfg_parser
-from nextcloud_submitter.consts import NICE_NAME, VERSION, BUILD_INFO,\
+from nextcloud_submitter.consts import NICE_NAME, VERSION, BUILD_INFO, \
     ENV_CONFIG, DEFAULT_CONFIG
 from nextcloud_submitter.logger import LOG, init_default_logging, init_config_logging
 
@@ -50,9 +48,10 @@ async def submit(request: fastapi.Request):
     # (2) Get data and code
     code = request.headers.get('X-Code', cfg.service.code)
     data = await request.body()
+    LOG.info(code)
     # (3) Return response
     if code == 'ok':
-       nextcloud.submit(data)
+        nextcloud.submit(data)
     elif code == 'error':
         return fastapi.responses.PlainTextResponse(
             status_code=fastapi.status.HTTP_500_INTERNAL_SERVER_ERROR,

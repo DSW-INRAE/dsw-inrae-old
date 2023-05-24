@@ -2,6 +2,8 @@
 
 services:
   nextcloud-submitter:
-#    image:
+    image: nextcloud_submission_service
     ports:
-      - 8888:80
+      - 8887:80
+    extra_hosts:
+      - localhost:host-gateway
