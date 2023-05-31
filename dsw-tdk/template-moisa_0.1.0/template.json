@@ -26,7 +26,7 @@
         {
           "name": "jinja",
           "options": {
-            "template": "src/csv/template.csv.jinja2",
+            "template": "src/csv/generic-template.csv.jinja2",
             "content-type": "text/csv",
             "extension": "csv"
           }
@@ -63,6 +63,40 @@
             "template": "src/submit.json.jinja2",
             "content-type": "text/json",
             "extension": "json"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "2e3cd342-fcab-41ac-b155-6487e8ddb12b",
+      "name": "CSV Projet",
+      "shortName": "csvprjt",
+      "icon": "fas fa-file",
+      "color": "#f15722",
+      "steps": [
+        {
+          "name": "jinja",
+          "options": {
+            "template": "src/csv/projet.csv.jinja2",
+            "content-type": "text/csv",
+            "extension": "csv"
+          }
+        }
+      ]
+    },
+    {
+      "uuid": "045cdb0c-d700-4b13-b83b-14f5cd9c26d9",
+      "name": "CSV Projet de Recherche",
+      "shortName": "csv-projet-recherche",
+      "icon": "fas fa-file",
+      "color": "#f15722",
+      "steps": [
+        {
+          "name": "jinja",
+          "options": {
+            "template": "src/csv/projet-recherche.csv.jinja2",
+            "content-type": "text/csv",
+            "extension": "csv"
           }
         }
       ]

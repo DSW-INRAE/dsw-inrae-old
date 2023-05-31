@@ -1,100 +1,37 @@
-{#- Macros -#}
-
-{#- Cette fonction permet de traverser récursivement les question -#}
-
-{%- macro markQuestions(question, questionString) -%}
-
-    {%- if question.questionType == "ListQuestion" -%}
-        {%- set i = namespace(value = 1) -%}
-        {%- for subQuestionUuid in question.itemTemplateQuestionUuids -%}
-            {%- set subQuestion = km.entities.questions[subQuestionUuid] -%}
-            {{- markQuestions(subQuestion, questionString + "_" + i.value | string) -}}
-            {%- set i.value = i.value + 1 -%}
-        {%- endfor -%}
-    {%- elif question.questionType == "OptionsQuestion" -%}
-        {{- "\"" + questionString + "\"," -}}
-        {%- set charOfQuestion = namespace(value = 0) -%}
-        {%- for possibleAnswers in question.answerUuids -%}
-
-        {%- set followUpUuids = km.entities.answers[answerUuid].followUpUuids -%}
-
-        {%- set i = namespace(value = 1) -%}
-        {%- for followUpUuid in followUpUuids -%}
-            {%- set subQuestion = km.entities.questions[followUpUuid] -%}
-
-            {{- replyPathUuids.append(answerUuid) or "" -}}
-            {{- replyPathUuids.append(followUpUuid) or "" -}}
-
-            {{- markQuestions(replyPathUuids, subQuestion, questionString + "_" + questionIndex.value | of_alphabet + "_" + i.value | string) -}}
-
-            {{- replyPathUuids.remove(answerUuid) or "" -}}
-            {{- replyPathUuids.remove(followUpUuid) or "" -}}
-
-            {%- set i.value = i.value + 1 -%}
-        {%- endfor -%}
-    {%- else -%}
-        {{- "\"" + questionString + "\"," -}}
-    {%- endif -%}
-{%- endmacro %}
-
-{%- macro valuesOfQuestions(replyPathUuids, question) -%}
-    {%- set reply = repliesMap[replyPathUuids | reply_path].value -%}
-
-    {%- if question.questionType == "ListQuestion" -%}
-        {%- for questionUuid in reply.value -%}
-            {%- for subQuestionUuid in question.itemTemplateQuestionUuids -%}
-                {%- set subQuestion = km.entities.questions[subQuestionUuid] -%}
-                {{- replyPathUuids.append(questionUuid) or "" -}}
-                {{- replyPathUuids.append(subQuestionUuid) or "" -}}
-
-                {{- valuesOfQuestions(replyPathUuids, subQuestion) -}}
-
-                {{- replyPathUuids.remove(questionUuid) or "" -}}
-                {{- replyPathUuids.remove(subQuestionUuid) or "" -}}
+{%- extends "src/csv/abstract-template.csv.jinja2" -%}
+{%- block body -%}
+    {#- Body of the script -#}
+    {%- set i = namespace(value = 1) -%}
+    {%- for chapterUuid in km.chapterUuids -%}
+        {%- if loop.index < 3 -%}
+            {% set j = namespace(value = 1) %}
+            {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
+                {%- set question = km.entities.questions[questionUuid] -%}
+                {{- markQuestions([chapterUuid, questionUuid], question, "q" + i.value | string + "_" + j.value | string) -}}
+                {%- set j.value = j.value + 1 -%}
             {%- endfor -%}
-        {%- endfor -%}
-    {%- elif question.questionType == "OptionsQuestion" -%}
-        {{- "\"" + km.entities.answers[reply.value].label + "\"," -}}
-        {%- set answerUuid = reply.value -%}
-
-        {%- set followUpUuids = km.entities.answers[answerUuid].followUpUuids -%}
-
-        {%- for followUpUuid in followUpUuids -%}
-            {%- set subQuestion = km.entities.questions[followUpUuid] -%}
-            {{- replyPathUuids.append(answerUuid) or "" -}}
-            {{- replyPathUuids.append(followUpUuid) or "" -}}
-
-            {{- valuesOfQuestions(replyPathUuids, subQuestion) -}}
-
-            {{- replyPathUuids.remove(answerUuid) or "" -}}
-            {{- replyPathUuids.remove(followUpUuid) or "" -}}
-        {%- endfor -%}
-    {%- else -%}
-        {{- "\"" + reply.value + "\"," -}}
-    {%- endif -%}
-{%- endmacro -%}
-
-{#- Body of the script -#}
-
-{%- set km = ctx.knowledgeModel -%}
-{%- set repliesMap = ctx.questionnaireReplies -%}
-
-{%- set i = namespace(value = 1) -%}
-{%- for chapterUuid in km.chapterUuids -%}
-    {% set j = namespace(value = 1) %}
-    {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
-        {%- set question = km.entities.questions[questionUuid] -%}
-        {{- markQuestions([chapterUuid, questionUuid], question, "q" + i.value | string + "_" + j.value | string) -}}
-        {%- set j.value = j.value + 1 -%}
+            {%- set i.value = i.value + 1 -%}
+        {%- endif -%}
     {%- endfor -%}
-    {%- set i.value = i.value + 1 -%}
-{%- endfor -%}
 
-{{- "\n" -}}
+    {{- "\n" -}}
 
-{%- for chapterUuid in km.chapterUuids -%}
-    {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
-        {%- set question = km.entities.questions[questionUuid] -%}
-        {{- valuesOfQuestions([chapterUuid, questionUuid], question) -}}
+    {%- for chapterUuid in km.chapterUuids -%}
+        {%- if loop.index < 3 -%}
+            {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
+                {%- set question = km.entities.questions[questionUuid] -%}
+                {{- valuesOfQuestions([chapterUuid, questionUuid], question) -}}
+            {%- endfor -%}
+        {%- else -%}
+            {%- if loop.index == 3 -%}
+                {{- ",,\n" -}}
+                {{- ",,\n" -}}
+                {{- "projet_recherche_uuid" -}}
+                {{- "\n" -}}
+                {%- for questionUuid in km.entities.chapters[chapterUuid].questionUuids -%}
+                    {{- markProjetRechercheUuid([chapterUuid, questionUuid]) -}}
+                {%- endfor -%}
+            {%- endif -%}
+        {%- endif -%}
     {%- endfor -%}
-{%- endfor -%}
+{%- endblock -%}

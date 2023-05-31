@@ -63,6 +63,14 @@ Ajout d'une question intermédiaire demandant si les responsables sont issus d'u
 
 Ajout d'une question "préciser" si un aspect éthique est à noter
 
+### Questions 80 - 90~? : Transfert hors UE -> catégories de données
+
+Multi-choix au lieu de 12 choix "oui/non"
+
+### échange de données 
+
+**Après** : demander si la méthode est connue, puis en demander la nature 
+
 ## Chapitre 4
 
 ### Question 1 : nom du jeu de données

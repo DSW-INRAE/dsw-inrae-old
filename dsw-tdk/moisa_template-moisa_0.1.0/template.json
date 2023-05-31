@@ -17,23 +17,6 @@
     ],
     "formats": [
         {
-            "uuid": "8979e1c8-e1a1-4194-b782-4da659937b91",
-            "name": "HTML",
-            "shortName": "html",
-            "icon": "fas fa-file",
-            "color": "#f15722",
-            "steps": [
-                {
-                    "name": "jinja",
-                    "options": {
-                        "template": "src/template/template.html.j2",
-                        "content-type": "text/html",
-                        "extension": "html"
-                    }
-                }
-            ]
-        },
-        {
             "uuid": "f3a904e4-9468-4605-99ca-a86155ce8f69",
             "name": "DOCX",
             "shortName": "docx",

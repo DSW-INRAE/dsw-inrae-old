@@ -38,6 +38,8 @@ def create_base_folder(data_dictionary):
     }
 
     requests.request("MKCOL", url, headers=headers, data=payload)
+    # Créer share link avec OCS puis envoyer location 201 created
+    # Faire un service mail (voir si inrae a un mailer)
     return submission_folder_name
 
 
